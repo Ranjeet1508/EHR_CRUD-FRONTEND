@@ -1,4 +1,4 @@
-// SearchBar.jsx
+/// SearchBar.jsx
 
 import React, { useState } from 'react';
 import { Input, InputGroup, InputRightElement, IconButton, Flex } from '@chakra-ui/react';
