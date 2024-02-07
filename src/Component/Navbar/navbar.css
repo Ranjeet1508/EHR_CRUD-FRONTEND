@@ -1,0 +1,17 @@
+.nav-container{
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background: #8B0000;
+    color: white;
+}
+/* 
+.logo{
+    text-align: center;
+}
+
+.login{
+    text-align: right;
+} */
