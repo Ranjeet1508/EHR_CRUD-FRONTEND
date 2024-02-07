@@ -28,7 +28,7 @@ const AddPatient = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8080/ehrPatient/addPatients', formData);
+            await axios.post('https://brainy-crab-rugby-shirt.cyclic.app/ehrPatient/addPatients', formData);
             console.log("Patient added successfully");
             toast({
                 title: 'Patient Added.',

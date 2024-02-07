@@ -20,7 +20,7 @@ const UpdatePatient = () => {
   useEffect(() => {
     const fetchPatient = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/ehrPatient/patients/${id}`);
+        const response = await axios.get(`https://brainy-crab-rugby-shirt.cyclic.app/ehrPatient/patients/${id}`);
         setFormData(response.data.patient);
       } catch (error) {
         console.error('Error fetching patient:', error);
@@ -41,7 +41,7 @@ const UpdatePatient = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8080/ehrPatient/updatePatients/${id}`, formData);
+      await axios.put(`https://brainy-crab-rugby-shirt.cyclic.app/ehrPatient/updatePatients/${id}`, formData);
       toast({
         title: "Patient updated",
         status: "success",

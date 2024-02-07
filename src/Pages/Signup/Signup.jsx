@@ -25,7 +25,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-            await axios.post('http://localhost:8080/ehrUser/signup', {
+            await axios.post('https://brainy-crab-rugby-shirt.cyclic.app/ehrUser/signup', {
                 name: formData.name,
                 role: formData.role,
                 email: formData.email,

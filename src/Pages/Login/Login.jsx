@@ -23,7 +23,7 @@ const Login = () => {
   const handleSubmit = async(e) => {
     try {
         e.preventDefault();
-        let res = await axios.post('http://localhost:8080/ehrUser/login', {
+        let res = await axios.post('https://brainy-crab-rugby-shirt.cyclic.app/ehrUser/login', {
             email:formData.email,
             password:formData.password
         })

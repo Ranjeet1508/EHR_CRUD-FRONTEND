@@ -12,7 +12,7 @@ const Details = () => {
     useEffect(() => {
         const fetchPatient = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/ehrPatient/patients/${id}`);
+                const response = await axios.get(`https://brainy-crab-rugby-shirt.cyclic.app/ehrPatient/patients/${id}`);
                 setPatient(response.data.patient);
             } catch (error) {
                 console.error('Error fetching patient:', error);
@@ -29,7 +29,7 @@ const Details = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:8080/ehrPatient/deletePatients/${id}`);
+            await axios.delete(`https://brainy-crab-rugby-shirt.cyclic.app/ehrPatient/deletePatients/${id}`);
             toast({
                 title: "Patient deleted",
                 status: "success",
