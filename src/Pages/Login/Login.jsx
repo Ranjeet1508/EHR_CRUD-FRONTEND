@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { FormControl, FormLabel, Input, Stack, Button, Flex, Heading, Box, useToast } from '@chakra-ui/react';
+import { FormControl, FormLabel, Input, Stack,Text, Button, Flex, Heading, Box, useToast } from '@chakra-ui/react';
 import './login.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Login = () => {
     const toast = useToast();
@@ -62,6 +62,7 @@ const Login = () => {
             <Input type="password" name="password" value={formData.password} onChange={handleChange} />
           </FormControl>
           <Button colorScheme="blue" onClick={handleSubmit}>Login</Button>
+          <Text>Don't have an account? <Link to='/signup'><strong>SignUp here</strong></Link></Text>
         </Stack>
       </Box>
     </Flex>

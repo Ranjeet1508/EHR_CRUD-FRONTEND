@@ -7,6 +7,7 @@ import Navbar from './Component/Navbar/Navbar';
 import AddPatient from './Pages/AddPatient/AddPatient';
 import Details from './Pages/Details';
 import UpdatePatient from './Pages/UpdatePatient';
+import PrivateRoute from './Component/PrivateRoute';
 
 function App() {
 
@@ -14,12 +15,13 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
+        
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/addPatient' element={<AddPatient />} />
         <Route path='/patient/:id' element={<Details />} />
         <Route path='/updatePatient/:id' element={<UpdatePatient />} />
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<PrivateRoute><Home /></PrivateRoute>} />
       </Routes>
     </div>
   );
