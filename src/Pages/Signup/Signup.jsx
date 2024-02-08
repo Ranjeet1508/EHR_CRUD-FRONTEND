@@ -25,7 +25,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-            await axios.post('https://brainy-crab-rugby-shirt.cyclic.app/ehrUser/signup', {
+            await axios.post('https://ehr-crud-backend.vercel.app/ehrUser/signup', {
                 name: formData.name,
                 role: formData.role,
                 email: formData.email,

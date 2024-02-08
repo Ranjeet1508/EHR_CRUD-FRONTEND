@@ -11,7 +11,7 @@ const Home = () => {
 
     const getAllPatientFromApi = async () => {
         try {
-            let res = await axios.get('https://brainy-crab-rugby-shirt.cyclic.app/ehrPatient/getAllPatients');
+            let res = await axios.get('https://ehr-crud-backend.vercel.app/ehrPatient/getAllPatients');
             setAllPatient(res.data.patients);
             setFilteredPatient(res.data.patients);
             console.log(allPatient)
