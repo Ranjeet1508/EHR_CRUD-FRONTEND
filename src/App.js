@@ -8,14 +8,37 @@ import AddPatient from './Pages/AddPatient/AddPatient';
 import Details from './Pages/Details';
 import UpdatePatient from './Pages/UpdatePatient';
 import PrivateRoute from './Component/PrivateRoute';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function App() {
+
+  const loadUser = async() => {
+    try {
+        let token = localStorage.getItem("token");
+
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        };
+        const response = await axios.get(`https://ehr-crud-backend.vercel.app/ehrUser/me`, config);
+        console.log('hi ranjeet')
+        console.log(response.data);
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+  useEffect(() => {
+    console.log('component mounted')
+    loadUser();
+  }, []);
 
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        
+      <Routes>        
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/addPatient' element={<AddPatient />} />

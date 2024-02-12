@@ -28,6 +28,8 @@ const Login = () => {
             password:formData.password
         })
         let token = res.data.token;
+        let isUser = res.data.isUser;
+        localStorage.setItem("isUser", isUser);
         localStorage.setItem("token", token);
         toast({
             title: 'Login Successfull.',
